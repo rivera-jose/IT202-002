@@ -1,6 +1,6 @@
 <table><tr><td> <em>Assignment: </em> M2 PHP-HW</td></tr>
 <tr><td> <em>Student: </em> Jose Rivera(jpr47)</td></tr>
-<tr><td> <em>Generated: </em> 2/6/2022 3:52:09 PM</td></tr>
+<tr><td> <em>Generated: </em> 2/6/2022 4:06:26 PM</td></tr>
 <tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-002-S22/m2-php-hw/grade/jpr47" target="_blank">Grading</a></td></tr></table>
 <table><tr><td> <em>Instructions: </em> <p>Make sure you have the dev/prod branches created before starting this assignment.</p>
 <p>Setup steps:</p>
@@ -111,16 +111,16 @@ You can find all 3 template files in this gist: <a href="https://gist.github.com
 <tr><td> <em>Sub-Task 2: </em> Describe how you solved the problem</td></tr>
 <tr><td> <em>Response:</em> <p>I solved the problem by writing down some pseudo-code for each problem previously<br>before coding. I then implemented the pseudo-code in php. executed and tested the<br>code online to test my output. I verified the output was correct. <br></p><br></td></tr>
 </table></td></tr>
-<table><tr><td> <em>Deliverable 4: </em> Misc Items </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://via.placeholder.com/400x120/ff0000/000000?text=Incomplete"></td></tr>
+<table><tr><td> <em>Deliverable 4: </em> Misc Items </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add the prod URL for problem1.php (remember you can assume this based on how the domain gets built (i.e., ucid-prod.herokuapp.com/...)</td></tr>
-<tr><td>Not provided</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://jpr47-prod.herokuapp.com/M2/problem1.php">https://jpr47-prod.herokuapp.com/M2/problem1.php</a> </td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add the prod URL for problem2.php (remember you can assume this based on how the domain gets built (i.e., ucid-prod.herokuapp.com/...)</td></tr>
-<tr><td>Not provided</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://jpr47-prod.herokuapp.com/M2/problem2.php">https://jpr47-prod.herokuapp.com/M2/problem2.php</a> </td></tr>
 <tr><td> <em>Sub-Task 3: </em> Add the prod URL for problem3.php (remember you can assume this based on how the domain gets built (i.e., ucid-prod.herokuapp.com/...)</td></tr>
-<tr><td>Not provided</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://jpr47-prod.herokuapp.com/M2/problem3.php">https://jpr47-prod.herokuapp.com/M2/problem3.php</a> </td></tr>
 <tr><td> <em>Sub-Task 4: </em> Pull Request URL for M2-PHP-HW to dev</td></tr>
-<tr><td>Not provided</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/rivera-jose/IT202-002/pull/6">https://github.com/rivera-jose/IT202-002/pull/6</a> </td></tr>
 <tr><td> <em>Sub-Task 5: </em> Talk about what you learned, any issues you had, how you resolve them</td></tr>
-<tr><td> <em>Response:</em> <p>(missing)</p><br></td></tr>
+<tr><td> <em>Response:</em> <p>I had some issues regarding my understanding of the instructions. I asked the<br>professor and eventually I was clarified, but I plan for the future read<br>things more clearly. <br></p><br></td></tr>
 </table></td></tr>
 <table><tr><td><em>Grading Link: </em><a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-002-S22/m2-php-hw/grade/jpr47" target="_blank">Grading</a></td></tr></table>
