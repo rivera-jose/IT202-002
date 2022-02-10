@@ -1,6 +1,6 @@
 <table><tr><td> <em>Assignment: </em> M2 PHP-HW</td></tr>
 <tr><td> <em>Student: </em> Jose Rivera(jpr47)</td></tr>
-<tr><td> <em>Generated: </em> 2/6/2022 4:06:26 PM</td></tr>
+<tr><td> <em>Generated: </em> 2/10/2022 1:33:35 PM</td></tr>
 <tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-002-S22/m2-php-hw/grade/jpr47" target="_blank">Grading</a></td></tr></table>
 <table><tr><td> <em>Instructions: </em> <p>Make sure you have the dev/prod branches created before starting this assignment.</p>
 <p>Setup steps:</p>
@@ -59,16 +59,16 @@ You can find all 3 template files in this gist: <a href="https://gist.github.com
 </td></tr></table>
 <table><tr><td> <em>Deliverable 1: </em> Problem 1 - Only output Odd values of the Array under "Odds output" </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Clearly screenshot the output of Problem 1 showing the data and the code output in the proper part of the page</td></tr>
-<tr><td><table><tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/Image00.PNG"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153472285-a5e7e6cb-693a-4ad0-9c1e-a25fcc2299f5.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the output of the first array<br></p>
 </td></tr>
-<tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image01.PNG"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153472358-dd80fe34-3018-4fea-a4a1-cb50fcdd783f.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the output of the second array<br></p>
 </td></tr>
-<tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image02.PNG"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153472404-749330be-3ca9-4635-9207-3bbc38dd933f.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the output of the third array<br></p>
 </td></tr>
-<tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image03.PNG"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153472996-9965d642-7b10-4941-9a47-bebdbe5caaec.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the output of the fourth array<br></p>
 </td></tr>
 </table></td></tr>
@@ -77,16 +77,16 @@ You can find all 3 template files in this gist: <a href="https://gist.github.com
 </table></td></tr>
 <table><tr><td> <em>Deliverable 2: </em> Problem 2 - Only output the sum/total of the array values by assigning it to the $total variable (the number must end in 2 decimal places, if it ends in 1 it must have a 0 at the end) </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Clearly screenshot the output of Problem 2 showing the data and the code output in the proper part of the page</td></tr>
-<tr><td><table><tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image004.PNG"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153473049-9e4b0ceb-e8db-4f3f-b5d9-ebafeb3c78e0.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the sum of the first array<br></p>
 </td></tr>
-<tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image005.PNG"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153473103-de53ac28-6a99-4c04-aaf3-d54a4d572eda.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the sum of the second array<br></p>
 </td></tr>
-<tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image006.PNG"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153473144-a9ddd85c-132f-41b7-9638-27f4845ed898.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the sum of the third array<br></p>
 </td></tr>
-<tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image07.PNG"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153473186-f8cccb8a-f694-477d-84f2-4e38c6447fe0.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the sum of the fourth array<br></p>
 </td></tr>
 </table></td></tr>
@@ -95,16 +95,16 @@ You can find all 3 template files in this gist: <a href="https://gist.github.com
 </table></td></tr>
 <table><tr><td> <em>Deliverable 3: </em> Problem 3 - Output the given values as positive under the "Positive Output" message (the data otherwise shouldn't change) </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Clearly screenshot the output of Problem 3 showing the data and the code output in the proper part of the page</td></tr>
-<tr><td><table><tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image08.PNG"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153473268-391aaadf-cd23-46d8-9cf2-aff8ecce4482.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the positive values of the first array<br></p>
 </td></tr>
-<tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image09.PNG"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153473370-b4d5a4c9-d741-40eb-b06f-ff7682e54255.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the positive values of the second array<br></p>
 </td></tr>
-<tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image10.PNG"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153473502-21e0bac9-534d-465d-81bc-9b76297561af.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the positive values of the third array<br></p>
 </td></tr>
-<tr><td><img width="768px" src="file:///C:/Users/river/OneDrive/Desktop/image11.PNG"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/153473652-c7160d8e-a719-47f5-9b19-8cf5bc5d578b.PNG"/></td></tr>
 <tr><td> <em>Caption:</em> <p>this is a screenshot of the positive values of the fourth array<br></p>
 </td></tr>
 </table></td></tr>
