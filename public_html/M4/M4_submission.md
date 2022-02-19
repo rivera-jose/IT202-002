@@ -1,6 +1,6 @@
 <table><tr><td> <em>Assignment: </em> Init DB Setup</td></tr>
 <tr><td> <em>Student: </em> Jose Rivera(jpr47)</td></tr>
-<tr><td> <em>Generated: </em> 2/18/2022 8:50:31 PM</td></tr>
+<tr><td> <em>Generated: </em> 2/18/2022 9:01:28 PM</td></tr>
 <tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-002-S22/init-db-setup/grade/jpr47" target="_blank">Grading</a></td></tr></table>
 <table><tr><td> <em>Instructions: </em> <p>Reminder: Make sure you start in dev and it&#39;s up to date</p>
 <ul>
@@ -62,6 +62,6 @@
 <tr><td> <em>Sub-Task 3: </em> Add the pull request link (ProjectSetup to Dev)</td></tr>
 <tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/rivera-jose/IT202-002/pull/18">https://github.com/rivera-jose/IT202-002/pull/18</a> </td></tr>
 <tr><td> <em>Sub-Task 4: </em> Paste the direct link from heroku prod to the init_db.php file (i.e., https://mt85-prod.herokuapp.com/Project/sql/init_db.php)</td></tr>
-<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/rivera-jose/IT202-002/blob/prod/init_db.php">https://github.com/rivera-jose/IT202-002/blob/prod/init_db.php</a> </td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/rivera-jose/IT202-002/blob/prod/public_html/Project/sql/init_db.php">https://github.com/rivera-jose/IT202-002/blob/prod/public_html/Project/sql/init_db.php</a> </td></tr>
 </table></td></tr>
 <table><tr><td><em>Grading Link: </em><a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-002-S22/init-db-setup/grade/jpr47" target="_blank">Grading</a></td></tr></table>
