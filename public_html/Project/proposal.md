@@ -1,6 +1,6 @@
 # Project Name: Simple Shop
 ## Project Summary: This project will create a simple e-commerce site for users. Administrators or store owners will be able to manage inventory and users will be able to manage their cart and place orders.
-## Github Link: (https://github.com/rivera-jose/IT202-002/tree/prod/public_html/Project)
+## Github Link: https://github.com/rivera-jose/IT202-002/tree/prod/public_html/Project
 ## Project Board Link: https://github.com/rivera-jose/IT202-002/projects/1
 ## Website Link: https://jpr47-prod.herokuapp.com/Project
 ## Your Name: Jose Rivera
