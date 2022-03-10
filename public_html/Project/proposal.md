@@ -41,7 +41,6 @@
   - (duplicate template here for Milestone 1 features)
 - Milestone 4
   - (duplicate template here for Milestone 1 features)
-  - 
 ### Intructions
 #### Don't delete this
 1. Pick one project type
