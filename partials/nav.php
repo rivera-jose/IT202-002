@@ -1,18 +1,3 @@
-Skip to content
- 
-Search…
-All gists
-Back to GitHub
-@rivera-jose 
-@MattToegel
-MattToegel/nav.php Secret
-Last active 19 days ago • Report abuse
-0
-0
- Code
- Revisions 2
-<script src="https://gist.github.com/MattToegel/0b6170be23a2bd0c06d12a2db33e9163.js"></script>
-nav.php
 <?php
 require_once(__DIR__ . "/../lib/functions.php");
 //Note: this is to resolve cookie issues with port numbers
