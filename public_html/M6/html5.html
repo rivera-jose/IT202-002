@@ -201,6 +201,7 @@
             //left side of ball passes left side of paddle
             if (ball.x < leftPaddle.x) {
                 rightScore++;
+                leftScore--;
                 resetBall();
             }
             //right side of ball passes right side of paddle 
@@ -226,19 +227,50 @@
         }
 
         function gameLoop() {
-            erase();
-            movePaddle();
-            doAI();
-            moveBall();
-
-            checkPaddleCollision();
-            checkScore();
-            drawScores();
-            //draw stuff
-            for (let i = 0; i < drawables.length; i++) {
-                drawables[i].draw();
+            if(leftScore < 10 && rightScore < 10) {
+                erase();
+                movePaddle();
+                doAI();
+                moveBall();
+                checkPaddleCollision();
+                checkScore();
+                drawScores();
+                //draw stuff
+                for (let i = 0; i < drawables.length; i++) 
+                {
+                    if(leftScore %2 == 1 || leftScore %2 ==-1)
+                    {
+                        leftPaddle.h = 50;
+                    }
+                    else
+                    {
+                        leftPaddle.h = 100;
+                    }
+                    drawables[i].draw();
+                }
             }
-        }
+            else
+            {
+                erase();
+                context.fillStyle = '#000000';
+                context.font = '24px Arial';
+                context.textAlign = 'center';
+                let offsetY = canvas.height / 2; 
+                let offsetX = canvas.width / 2 ;
+                
+                if(rightScore==10)
+                {
+                    context.fillText('Game Over! You lose', offsetX, offsetY);
+                }
+                else
+                {
+                    context.fillText('Game Over! You win', offsetX, offsetY);
+                }
+
+                
+               
+            }
+    }
     </script>
     <style>
         canvas:focus{
