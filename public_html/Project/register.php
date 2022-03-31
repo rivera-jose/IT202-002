@@ -25,8 +25,19 @@ reset_session();
     function validate(form) {
         //TODO 1: implement JavaScript validation
         //ensure it returns false for an error and true for success
+        let username = '/^[a-z0-9_-]{3,16}$/'
+        let result1 = username.test(form);
+        let email = '/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/';
+        let result2 = email.test(form);
 
-        return true;
+        if(result1 == true || result2 == true){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+        
     }
 </script>
 <?php
