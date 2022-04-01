@@ -53,7 +53,7 @@ if (isset($_POST["save"])) {
     $confirm_password = se($_POST, "confirmPassword", null, false);
     if (!empty($current_password) && !empty($new_password) && !empty($confirm_password)) {
         $hasError = false;
-        if (!is_valid_password($password)) {
+        if (!is_valid_password($new_password)) {
             flash("Password too short", "danger");
             $hasError = true;
         }
@@ -125,11 +125,16 @@ $username = get_username();
         let con = form.confirmPassword.value;
         let isValid = true;
         //TODO add other client side validation....
+        if(strlen(form.newPassword.value) < 8)
+        {
+            flash("Password must be at least 8 characters long", "warning");
+            isValid = false;
+        }
 
         //example of using flash via javascript
         //find the flash container, create a new element, appendChild
         if (pw !== con) {
-            flash("Password and Confrim password must match", "warning");
+            flash("Password and Confirm password must match", "warning");
             isValid = false;
         }
         return isValid;
