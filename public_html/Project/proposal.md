@@ -16,25 +16,25 @@
  
 ### Proposal Checklist and Evidence
 
-- Milestone 1
-  - [ ] \(mm/dd/yyyy of completion) Feature-UserRegistration
-     -  Link to related .md file: [Link Name](link url) 
-  - [ ] \(mm/dd/yyyy of completion) Feature-UserRoles 
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-UserLogin
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-UserLogout
-     -  Link to related .md file: [Link Name](link url) 
-  - [ ] \(mm/dd/yyyy of completion) Feature-SecurityRules
-     -  Link to related .md file: [Link Name](link url) 
-  - [ ] \(mm/dd/yyyy of completion) Feature-SiteStyle
-     -  Link to related .md file: [Link Name](link url) 
-  - [ ] \(mm/dd/yyyy of completion) Feature-FlashMessages
-     -  Link to related .md file: [Link Name](link url) 
-  - [ ] \(mm/dd/yyyy of completion) Feature-UserProfile
-     -  Link to related .md file: [Link Name](link url) 
-  - [ ] \(mm/dd/yyyy of completion) Feature-EditProfile
-     -  Link to related .md file: [Link Name](link url) 
+- [Milestone 1](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md)
+  - [x] \(02/21/2022) Feature-UserRegistration
+     -  [registration](https://jpr47-prod.herokuapp.com/Project/register.php) 
+  - [x] \(03/28/2022) Feature-UserRoles 
+     -  [UserRoles](https://jpr47-prod.herokuapp.com/Project/admin/list_roles.php)
+  - [x] \(02/25/2022) Feature-UserLogin
+     -  [login](https://jpr47-prod.herokuapp.com/Project/login.php)
+  - [x] \(02/25/2022) Feature-UserLogout
+     -  [logout](https://jpr47-prod.herokuapp.com/Project/logout.php)
+  - [x] \(03/28/2022) Feature-SecurityRules
+     -  [SecurityRules](https://jpr47-prod.herokuapp.com/Project/admin/list_roles.php)) 
+  - [x] \(03/25/2022) Feature-SiteStyle
+     -  [SiteStyle](https://jpr47-prod.herokuapp.com/Project/styles.css) 
+  - [x] \(03/03/2022) Feature-FlashMessages
+     -  [FlashMessages](https://jpr47-prod.herokuapp.com/Project/login.php) 
+  - [x] \(03/03/2022) Feature-UserProfile
+     -  [profile](https://jpr47-prod.herokuapp.com/Project/profile.php) 
+  - [x] \(03/03/2022) Feature-EditProfile
+     -  [EditProfile](https://jpr47-prod.herokuapp.com/Project/profile.php) 
 - Milestone 2
   - (duplicate template here for Milestone 1 features)
 - Milestone 3
