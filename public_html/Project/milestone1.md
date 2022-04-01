@@ -1,6 +1,6 @@
 <table><tr><td> <em>Assignment: </em> IT202 Milestone1 Deliverable</td></tr>
 <tr><td> <em>Student: </em> Jose Rivera(jpr47)</td></tr>
-<tr><td> <em>Generated: </em> 3/31/2022 11:50:51 PM</td></tr>
+<tr><td> <em>Generated: </em> 4/1/2022 12:22:44 AM</td></tr>
 <tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-002-S22/it202-milestone1-deliverable/grade/jpr47" target="_blank">Grading</a></td></tr></table>
 <table><tr><td> <em>Instructions: </em> <ol>
 <li>Checkout Milestone1 branch</li>
@@ -179,7 +179,7 @@
 </table></td></tr>
 <table><tr><td> <em>Deliverable 9: </em> Proposal and Issues </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshots showing your updated proposal.md file with checkmarks, dates, and link to milestone1.md accordingly and a direct link to the path on heroku prod (see instructions)</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/161191122-4726c187-03fa-4cde-98c6-e1f5794e84e9.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/161194467-bed9158e-575b-451d-8716-731ee7aa39b9.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>first part of the proposal.md file<br></p>
 </td></tr>
 <tr><td><img width="768px" src="https://user-images.githubusercontent.com/34193171/161191212-1222d803-f1f1-47b5-8252-98be1e9b6ff6.png"/></td></tr>
