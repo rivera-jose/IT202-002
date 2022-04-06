@@ -17,11 +17,11 @@ require(__DIR__ . "/../../partials/nav.php");
         //TODO 1: implement JavaScript validation
         //ensure it returns false for an error and true for success
         let username = '/^[a-z0-9_-]{3,16}$/'
-        let result1 = username.test(form);
+        let result1 = username.test(form.username);
         let email = '/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/';
-        let result2 = email.test(form);
+        let result2 = email.test(form.email);
 
-        if(result1 == true || result2 == true){
+        if(result1 == true && result2 == true){
             return true;
         }
         else{
