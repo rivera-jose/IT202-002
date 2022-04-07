@@ -36,7 +36,28 @@
   - [x] \(03/03/2022) Feature-EditProfile
      -  [EditProfile](https://jpr47-prod.herokuapp.com/Project/profile.php) 
 - Milestone 2
-  - (duplicate template here for Milestone 1 features)
+  - [ ] \(mm/dd/yyyy of completion) Feature-Products
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-ProductVisibility
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-ProductsAdminVisibility
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-AdminEditProducts
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-ProductsInfo
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-CartLogin
+     -  Link to related .md file: [Link Name](link url) 
+  - [ ] \(mm/dd/yyyy of completion) Feature-EditCartAdd
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-ViewCart
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-EditCartQuantity
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-EditCartRemove
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-EditCartClear
+     -  Link to related .md file: [Link Name](link url)      
 - Milestone 3
   - (duplicate template here for Milestone 1 features)
 - Milestone 4
