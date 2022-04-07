@@ -1,6 +1,6 @@
 <table><tr><td> <em>Assignment: </em> Milestone 2 - Proposal markdown</td></tr>
 <tr><td> <em>Student: </em> Jose Rivera(jpr47)</td></tr>
-<tr><td> <em>Generated: </em> 4/6/2022 10:53:04 PM</td></tr>
+<tr><td> <em>Generated: </em> 4/6/2022 10:57:39 PM</td></tr>
 <tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-002-S22/milestone-2---proposal-markdown/grade/jpr47" target="_blank">Grading</a></td></tr></table>
 <table><tr><td> <em>Instructions: </em> <ol>
 <li>Create a new branch from Milestone2 called MS2-Proposal</li>
@@ -30,7 +30,7 @@
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add the direct link to your proposal.md file from the MS2-Proposal branch (There should be at least 11 for shop, 5 for arcade, 8 for bank under Milestone2)</td></tr>
 <tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/rivera-jose/IT202-002/blob/MS2-Proposal/public_html/Project/proposal.md">https://github.com/rivera-jose/IT202-002/blob/MS2-Proposal/public_html/Project/proposal.md</a> </td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add the link to the pull request from MS2-Proposal to Milestone 2</td></tr>
-<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/rivera-jose/IT202-002/pull/58">https://github.com/rivera-jose/IT202-002/pull/58</a> </td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/rivera-jose/IT202-002/pull/69">https://github.com/rivera-jose/IT202-002/pull/69</a> </td></tr>
 </table></td></tr>
 <table><tr><td> <em>Deliverable 2: </em> Github Issues and Project Board </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add Screenshots showing the generated Issues on Github (there should be at least 11 for shop, 5 for arcade, 8 for bank; 1 per major bullet point)</td></tr>
