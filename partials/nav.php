@@ -58,6 +58,17 @@ session_start();
                         </ul>
                     </li>
                 <?php endif; ?>
+                <?php if (has_role("Shop Owner")) : ?>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="rolesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop Owner Roles
+                        </a>
+                        <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/add_item.php'); ?>">Create Product</a></li>
+                        </ul>
+                    </li>
+                <?php endif; ?>
+
                 <?php if (is_logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('logout.php'); ?>">Logout</a></li>
                 <?php endif; ?>
