@@ -55,7 +55,7 @@ session_start();
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/list_roles.php'); ?>">List</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/add_item.php'); ?>">Create Product</a></li>
-                        </ul>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/list_item.php'); ?>">List Products</a></li>                        </ul>
                     </li>
                 <?php endif; ?>
                 <?php if (has_role("Shop Owner")) : ?>
@@ -65,6 +65,7 @@ session_start();
                         </a>
                         <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/add_item.php'); ?>">Create Product</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/list_item.php'); ?>">List Products</a></li>
                         </ul>
                     </li>
                 <?php endif; ?>
