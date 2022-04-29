@@ -160,7 +160,7 @@ try {
                     <div class="card-footer">
                         Unit Price: <?php se($item, "unit_price"); ?>
                         <button onclick="purchase('<?php se($item, 'id'); ?>')" class="btn btn-primary">Buy Now</button>
-                        <button onclick="purchase('<?php se($item, 'id'); ?>')" class="btn btn-primary">Details</button>
+                        <a href="products-details.php?id=<?php se($item, "id"); ?>">Details</a>
                     </div>
                 </div>
             </div>
