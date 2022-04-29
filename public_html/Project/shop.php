@@ -18,17 +18,42 @@ if (!in_array($order, ["asc", "desc"])) {
 //get name partial search
 $name = se($_GET, "name", "", false);
 
+$query1 = "SELECT distinct category FROM Products";
+$stmt1 = $db->prepare($query1); //dynamically generated query
+try {
+    $stmt1->execute(); //dynamically populated params to bind
+    $r1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+    if ($r1) {
+        $categories = $r1;
+    }
+} catch (PDOException $e) {
+    error_log(var_export($e, true));
+    flash("Error fetching items", "danger");
+}
+
 //get category search
-$category = se($_GET, "name", "", false);
+$category = se($_GET, "category", "", false);
+
+//validate category
+if(in_array($category, $categories))
+{
+    $category='all';
+}
 
 //dynamic query
 $query = "SELECT id, name, description, category, unit_price, stock FROM Products WHERE visibility > 0 and stock > 0"; //1=1 shortcut to conditionally build AND clauses
 $params = []; //define default params, add keys as needed and pass to execute
 //apply name filter
 if (!empty($name)) {
-    $query .= " AND (category = '$name' or name like :name)";
+    $query .= " AND name like :name";
     $params[":name"] = "%$name%";
 }
+
+if ($category !== 'all') {
+    $query .= " AND category = :cat";
+    $params[":cat"] = "$category";
+}
+
 
 //apply column and order sort
 if (!empty($col) && !empty($order)) {
@@ -46,6 +71,7 @@ try {
     error_log(var_export($e, true));
     flash("Error fetching items", "danger");
 }
+
 ?>
 <script>
     function purchase(item) {
@@ -58,7 +84,20 @@ try {
 <form class="row row-cols-auto g-3 align-items-center">
         <div class="col">
             <div class="input-group" data="i">
-                <div class="input-group-text">Name/Category</div>
+                <div class="input-group-text">Filter</div>
+                <select class="form-control bg-info" name="category" data="took">
+                    <?php foreach ($categories as $item1) : ?>
+                        <option value="<?php se($item1, "category");?>"><?php se($item1, "category");?></option>
+                    <?php endforeach; ?>
+                </select>
+                <script>
+                    document.forms[0].category.value = "<?php se($category);?>";
+                </script>
+            </div>
+        </div>
+        <div class="col">
+            <div class="input-group" data="i">
+                <div class="input-group-text">Name</div>
                 <input class="form-control" name="name" value="<?php se($name); ?>" />
             </div>
         </div>
@@ -121,6 +160,7 @@ try {
                     <div class="card-footer">
                         Unit Price: <?php se($item, "unit_price"); ?>
                         <button onclick="purchase('<?php se($item, 'id'); ?>')" class="btn btn-primary">Buy Now</button>
+                        <button onclick="purchase('<?php se($item, 'id'); ?>')" class="btn btn-primary">Details</button>
                     </div>
                 </div>
             </div>
