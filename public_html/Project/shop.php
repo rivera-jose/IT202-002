@@ -2,6 +2,7 @@
 require(__DIR__ . "/../../partials/nav.php");
 
 $results = [];
+$logged_in = is_logged_in(false);
 $db = getDB();
 //process filters/sorting
 //Sort and Filters
@@ -73,13 +74,6 @@ try {
 }
 
 ?>
-<script>
-    function purchase(item) {
-        console.log("TODO purchase item", item);
-        alert("It's almost like you purchased an item, but not really");
-        //TODO create JS helper to update all show-balance elements
-    }
-</script>
 <!-- Jose's Form-->
 <form class="row row-cols-auto g-3 align-items-center">
         <div class="col">
@@ -156,10 +150,17 @@ try {
                         <h5 class="card-title">Name: <?php se($item, "name"); ?></h5>
                         <p class="card-text">Description: <?php se($item, "description"); ?></p>
                         <p class="card-text">Category: <?php se($item, "category"); ?></p>
+                        <p class="card-text">Unit Price: <?php se($item, "unit_price"); ?>
                     </div>
                     <div class="card-footer">
-                        Unit Price: <?php se($item, "unit_price"); ?>
-                        <button onclick="purchase('<?php se($item, 'id'); ?>')" class="btn btn-primary">Buy Now</button>
+                        <?php if ((is_logged_in())) : ?>
+                            <form action="<?php echo get_url('cart.php'); ?>" method="POST">
+                                <input type="hidden" name="product_id" value="<?php se($item, "id"); ?>" />
+                                <input type="hidden" name="unit_price" value="<?php se($item, "unit_price"); ?>" />
+                                <input type="quantity" name="quantity" value="1" />
+                                <input type="submit" name= "add" value="Add to Cart" class="btn btn-info" />
+                            </form>
+                        <?php endif; ?>
                         <a href="products-details.php?id=<?php se($item, "id"); ?>">Details</a>
                     </div>
                 </div>
