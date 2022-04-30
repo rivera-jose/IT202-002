@@ -32,9 +32,26 @@ if (isset($_POST["delete_all"])) {
 }
 
 $results=[];
+$user_id = get_user_id();
 
 //TODO create lookup query and fetch results, set them to $results
+if ($user_id > 0) {
+    $db = getDB();
+    $stmt = $db->prepare("SELECT name, product_id, quantity, c.unit_price, (c.unit_price*quantity) as subtotal FROM Cart c JOIN Products i on c.product_id = i.id WHERE c.user_id = :uid");
+    try {
+        $stmt->execute([":uid" => $user_id]);
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $total_cost = 0;
+        foreach ($results as $row) {
+            $total_cost += (float)se($row, "subtotal", 0, false);
+        }
+    } catch (PDOException $e) {
+        error_log("Error fetching cart" . var_export($e, true));
+    }
+}
+
 ?>
+
 <h1>Cart</h1>
 <?php if (count($results) == 0) : ?>
     <p>No results to show</p>
@@ -44,14 +61,18 @@ $results=[];
             <?php if ($index == 0) : ?>
                 <thead>
                     <?php foreach ($record as $column => $value) : ?>
-                        <th><?php se($column); ?></th>
+                        <?php if(!($column=='product_id')) : ?>
+                            <th><?php se($column); ?></th>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                     <th>Actions</th>
                 </thead>
             <?php endif; ?>
             <tr>
                 <?php foreach ($record as $column => $value) : ?>
-                    <td><?php se($value, null, "N/A"); ?></td>
+                    <?php if(!($column=='product_id')) : ?>
+                        <td><?php se($value, null, "N/A"); ?></td>
+                    <?php endif; ?>
                 <?php endforeach; ?>
                 <td>
                     <!-- other action buttons can go here-->
@@ -59,12 +80,17 @@ $results=[];
                         <input type="submit" value="Buy Me" class="btn btn-info" />
                     </form>
                     <!-- TODO only show this if the user is admin -->
-                    <a href="<?php echo get_url('admin/edit_product.php?id=') . se($record, "id"); ?>">Edit</a>
+                    <?php if(has_role("Admin")) : ?>
+                        <a href="admin/edit_item.php?id=<?php se($record, "product_id"); ?>">Edit</a>
+                    <?php endif; ?>
+                    <a href="products-details.php?id=<?php se($record, "product_id"); ?>">Details</a>
                 </td>
             </tr>
         <?php endforeach; ?>
     </table>
+    <h4> Total: <?php se($total_cost); ?> </h4>
 <?php endif; ?>
+
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
