@@ -8,10 +8,11 @@ if (isset($_POST["add"])) {
     $product_id = (int)se($_POST, "product_id", 0, false);
     $quantity = (int)se($_POST, "quantity", 0, false);
     $unit_price = (float)se($_POST, "unit_price", 0, false);
-    if (isset($product_id) && $product_id !== 0 && $quantity > 0) {
+    if (isset($product_id) && $product_id !== 0 && $quantity > 0) 
+    {
         $db = getDB();
         //note adding to cart doesn't verify price or quantity
-        $stmt = $db->prepare("INSERT INTO Cart (product_id, quantity, user_id, unit_price) VALUES(:iid, :q, :uid, :up) ON DUPLICATE KEY UPDATE quantity = quantity + :q");
+        $stmt = $db->prepare("INSERT INTO Cart (product_id, quantity, user_id, unit_price) VALUES(:iid, :q, :uid, :up) ON DUPLICATE KEY UPDATE quantity = :q");
         $stmt->bindValue(":iid", $product_id, PDO::PARAM_INT);
         $stmt->bindValue(":q", $quantity, PDO::PARAM_INT);
         $stmt->bindValue(":uid", get_user_id(), PDO::PARAM_INT);
@@ -22,22 +23,64 @@ if (isset($_POST["add"])) {
             error_log("Add to cart error: " . var_export($e, true));
         }
     }
+    else{
+        $user_id = get_user_id();
+
+        $line_id = se($_REQUEST, "line_id", 0, false);
+        if ($user_id > 0 && $line_id > 0) {
+            $db = getDB();
+            $stmt = $db->prepare("DELETE FROM Cart where id = :id and :uid");
+            try {
+                //added user_id to ensure the user can only delete their own items
+                $stmt->execute([":id" => $line_id, ":uid" => $user_id]);
+            } catch (PDOException $e) {
+            error_log("Error deleting line item: " . var_export($e, true));
+        }
+     }
+    }
 }
 
 if (isset($_POST["delete_one"])) {
     //delete single line item by Cart.id or Cart.product_id AND Cart.user_id
+    $user_id = get_user_id();
+
+    $line_id = se($_REQUEST, "line_id", 0, false);
+    if ($user_id > 0 && $line_id > 0) {
+        $db = getDB();
+        $stmt = $db->prepare("DELETE FROM Cart where id = :id and :uid");
+        try {
+            //added user_id to ensure the user can only delete their own items
+            $stmt->execute([":id" => $line_id, ":uid" => $user_id]);
+        } catch (PDOException $e) {
+        error_log("Error deleting line item: " . var_export($e, true));
+    }
+ }
 }
+
+
 if (isset($_POST["delete_all"])) {
     //delete all user's cart (only the user's items)
+    $user_id = get_user_id();
+
+    if ($user_id > 0) {
+        $db = getDB();
+        $stmt = $db->prepare("DELETE FROM Cart where user_id = :uid");
+        try {
+            //added user_id to ensure the user can only delete their own items
+            $stmt->execute([":uid" => $user_id]);
+        } catch (PDOException $e) {
+    }
+}
 }
 
-$results=[];
-$user_id = get_user_id();
+
 
 //TODO create lookup query and fetch results, set them to $results
+$results=[];
+$user_id = get_user_id();
 if ($user_id > 0) {
     $db = getDB();
-    $stmt = $db->prepare("SELECT name, product_id, quantity, c.unit_price, (c.unit_price*quantity) as subtotal FROM Cart c JOIN Products i on c.product_id = i.id WHERE c.user_id = :uid");
+    $stmt = $db->prepare("SELECT name, c.id, product_id, quantity, c.unit_price, (c.unit_price*quantity) as subtotal FROM Cart c JOIN Products i on c.product_id = i.id WHERE c.user_id = :uid");
     try {
         $stmt->execute([":uid" => $user_id]);
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -61,7 +104,7 @@ if ($user_id > 0) {
             <?php if ($index == 0) : ?>
                 <thead>
                     <?php foreach ($record as $column => $value) : ?>
-                        <?php if(!($column=='product_id')) : ?>
+                        <?php if(!($column=='product_id' || $column=='id')) : ?>
                             <th><?php se($column); ?></th>
                         <?php endif; ?>
                     <?php endforeach; ?>
@@ -70,14 +113,23 @@ if ($user_id > 0) {
             <?php endif; ?>
             <tr>
                 <?php foreach ($record as $column => $value) : ?>
-                    <?php if(!($column=='product_id')) : ?>
+                    <?php if(!($column=='product_id' || $column =='id')) : ?>
                         <td><?php se($value, null, "N/A"); ?></td>
                     <?php endif; ?>
                 <?php endforeach; ?>
                 <td>
                     <!-- other action buttons can go here-->
-                    <form action="<?php echo get_url('order.php'); ?>" method=" POST">
+                    <form action="<?php echo get_url('order.php'); ?>" method="POST">
                         <input type="submit" value="Buy Me" class="btn btn-info" />
+                    </form>
+                    <form action="<?php echo get_url('cart.php'); ?>" method="POST">
+                        <input type="hidden" name="line_id" value="<?php se($record, "id"); ?>" />
+                        <input type="hidden" name="product_id" value="<?php se($record, "product_id"); ?>" />
+                        <input type="hidden" name="unit_price" value="<?php se($record, "unit_price"); ?>" />
+                        <input type="hidden" name="quantity" value="<?php se($record, "quantity"); ?>" />
+                        <input type="quantity" name="quantity" value="<?php se($record, "quantity"); ?>"/>
+                        <input type="submit" name="add" value="Update Qty"/>
+                        <input type="submit" name= "delete_one" value="Delete" class="btn btn-info" />
                     </form>
                     <!-- TODO only show this if the user is admin -->
                     <?php if(has_role("Admin")) : ?>
@@ -88,7 +140,11 @@ if ($user_id > 0) {
             </tr>
         <?php endforeach; ?>
     </table>
-    <h4> Total: <?php se($total_cost); ?> </h4>
+    <h4> Total: <?php se($total_cost); ?>
+    <form action="<?php echo get_url('cart.php'); ?>" method="POST">
+      </h4> <input type="submit" name= "delete_all" value="Clear" class="btn btn-info" />
+    </form>
+
 <?php endif; ?>
 
 <?php
