@@ -36,28 +36,39 @@
   - [x] \(03/03/2022) Feature-EditProfile
      -  [EditProfile](https://jpr47-prod.herokuapp.com/Project/profile.php) 
 - Milestone 2
-  - [ ] \(mm/dd/yyyy of completion) Feature-Products
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-ProductVisibility
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-ProductsAdminVisibility
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-AdminEditProducts
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-ProductsInfo
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-CartLogin
-     -  Link to related .md file: [Link Name](link url) 
-  - [ ] \(mm/dd/yyyy of completion) Feature-EditCartAdd
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-ViewCart
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-EditCartQuantity
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-EditCartRemove
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-EditCartClear
-     -  Link to related .md file: [Link Name](link url)      
+  - [x] \(04/27/2022) Feature-Products
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
+     - [products](https://jpr47-prod.herokuapp.com/Project/Project/add_item.php)
+  - [x] \(04/28/2022) Feature-ProductVisibility
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
+     -  [products visibility](https://jpr47-prod.herokuapp.com/Project/shop.php)
+  - [x] \(04/28/2022) Feature-ProductsAdminVisibility
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
+     -  [admin products visibility](https://jpr47-prod.herokuapp.com/Project/admin/list_item.php)
+  - [x] \(04/28/2022) Feature-AdminEditProducts
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
+     -  [admin edit product](https://jpr47-prod.herokuapp.com/Project/admin/edit_item.php)
+  - [x] \(04/29/2022) Feature-ProductsInfo
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
+     -  [products info](https://jpr47-prod.herokuapp.com/Project/products-details.php)
+  - [x] \(04/30/2022 of completion) Feature-CartLogin
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
+     -  [Cart login](https://jpr47-prod.herokuapp.com/Project/cart.php) 
+  - [x] \(04/30/2022 of completion) Feature-EditCartAdd
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
+     -  [Edit Cart Add](https://jpr47-prod.herokuapp.com/Project/shop.php)
+  - [x] \(04/30/2022) Feature-ViewCart
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
+     -  [View Cart](https://jpr47-prod.herokuapp.com/Project/cart.php)
+  - [x] \(05/01/2022) Feature-EditCartQuantity
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
+     -  [Edit Cart Quantity ](https://jpr47-prod.herokuapp.com/Project/cart.php)
+  - [x] \(05/01/2022 of completion) Feature-EditCartRemove
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
+     -  [Edit Cart Remove](https://jpr47-prod.herokuapp.com/Project/cart.php)
+  - [x] \(05/01/2022 of completion) Feature-EditCartClear
+     -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md) 
+     -  [Edit Cart Clear](https://jpr47-prod.herokuapp.com/Project/cart.php)     
 - Milestone 3
   - (duplicate template here for Milestone 1 features)
 - Milestone 4

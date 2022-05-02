@@ -39,6 +39,9 @@ try {
                 <?php endforeach; ?>
             </tr>
         </table>
+        <?php if(has_role("Admin")) : ?>
+                <a href="admin/edit_item.php?id=<?php se($id); ?>">Edit</a>
+            <?php endif; ?>
     <?php endif; ?>
 </div>
 <?php

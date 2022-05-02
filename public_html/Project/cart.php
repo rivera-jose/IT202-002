@@ -19,6 +19,7 @@ if (isset($_POST["add"])) {
         $stmt->bindValue(":up", $unit_price, PDO::PARAM_STR);
         try {
             $stmt->execute();
+            flash("successfully added to cart");
             } catch (PDOException $e) {
             error_log("Add to cart error: " . var_export($e, true));
         }
