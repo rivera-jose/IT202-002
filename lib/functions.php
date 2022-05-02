@@ -22,4 +22,18 @@ require(__DIR__ . "/duplicate_user_details.php");
 require(__DIR__ . "/reset_session.php");
 
 require(__DIR__ . "/get_url.php");
+
+//get collumns function
+require(__DIR__ . "/get_columns.php");
+
+//save date function
+require(__DIR__ . "/save_data.php");
+
+//input map function
+require(__DIR__ . "/input_map.php");
+
+//update_data.php
+require(__DIR__ . "/update_data.php")
+
+
 ?>
