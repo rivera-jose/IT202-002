@@ -70,7 +70,14 @@
      -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md) 
      -  [Edit Cart Clear](https://jpr47-prod.herokuapp.com/Project/cart.php)     
 - Milestone 3
-  - (duplicate template here for Milestone 1 features)
+  - [ ] \(mm/dd/yyyy of completion) Feature-PurchaseItems
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-OrderConfirmationPage
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-User-PurchaseHistory
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-ShopOwner-PurchaseHistory
+     -  Link to related .md file: [Link Name](link url)
 - Milestone 4
   - (duplicate template here for Milestone 1 features)
 ### Intructions

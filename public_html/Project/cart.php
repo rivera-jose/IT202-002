@@ -120,9 +120,6 @@ if ($user_id > 0) {
                 <?php endforeach; ?>
                 <td>
                     <!-- other action buttons can go here-->
-                    <form action="<?php echo get_url('order.php'); ?>" method="POST">
-                        <input type="submit" value="Buy Me" class="btn btn-info" />
-                    </form>
                     <form action="<?php echo get_url('cart.php'); ?>" method="POST">
                         <input type="hidden" name="line_id" value="<?php se($record, "id"); ?>" />
                         <input type="hidden" name="product_id" value="<?php se($record, "product_id"); ?>" />
@@ -137,15 +134,56 @@ if ($user_id > 0) {
                         <a href="admin/edit_item.php?id=<?php se($record, "product_id"); ?>">Edit</a>
                     <?php endif; ?>
                     <a href="products-details.php?id=<?php se($record, "product_id"); ?>">Details</a>
+                    <br>
                 </td>
             </tr>
         <?php endforeach; ?>
     </table>
-    <h4> Total: <?php se($total_cost); ?>
     <form action="<?php echo get_url('cart.php'); ?>" method="POST">
-      </h4> <input type="submit" name= "delete_all" value="Clear" class="btn btn-info" />
+       <input type="submit" name= "delete_all" value="Clear" class="btn btn-info" />
     </form>
-
+    <form action="<?php echo get_url('order.php'); ?>" method="POST">
+        <br>
+        <div><h2>Shipping Address</h2> </div>
+    <div class="mb-3">
+        <label for="Street Address" class="form-label">Street Address</label>
+        <input type="text" class="form-control" name="street_address">
+    </div>
+    <div class="mb-3">
+        <label for="City" class="form-label">City</label>
+        <input type="text" class="form-control" name="city">
+    </div>
+    <div class="mb-3">
+        <label for="State" class="form-label">State</label>
+        <input type="text" class="form-control" name="state"> 
+    </div>
+    <div class="mb-3">
+        <label for="Zio Code" class="form-label">Zip Code</label>
+        <input type="text" class="form-control" name="zip_code">
+    </div>
+    <div class="mb-3">
+        <label for="Country" class="form-label">Country</label>
+        <input type="text" class="form-control" name="country">
+       
+    </div>
+    <div><h2>Checkout</h2> </div>
+    <div><h4> Total: <?php se($total_cost); ?> </h4></div>
+    <div class="input-group">
+        <div class="input-group-text">Payment Method</div>
+        <select class="bg-info" name="payment_method">
+            <option value="Cash">Cash</option>
+            <option value="MasterCard">MasterCard</option>
+            <option value="Amex">Amex</option>
+            <option value="Visa">Visa</option>
+        </select>
+        <input type="text" name="payment" placeholder="Payment Amount" />
+        <br>
+    </div>
+    <br>
+    <div>
+        <input type="hidden" value="<?php se($total_cost) ?>" name="total_cost" />
+        <input type="submit" name="purchase" value="Purchase" class="btn btn-info"/>
+</form>
 <?php endif; ?>
 
 <?php
