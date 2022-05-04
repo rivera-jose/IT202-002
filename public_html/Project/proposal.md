@@ -83,7 +83,20 @@
      -  Link to related .md file: [milestone3.md](https://github.com/rivera-jose/IT202-002/blob/Milestone3/public_html/Project/milestone3.md)
      -  [Shop Owner Purchase History](https://jpr47-prod.herokuapp.com/Project/purchase_history.php)
 - Milestone 4
-  - (duplicate template here for Milestone 1 features)
+  - [ ] \(mm/dd/yyyy of completion) Feature-profileStatus
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-productRatings
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-UserPurchaseHistoryChanges
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-ShopOwnerPurchaseHistoryChanges
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature-PaginateShopPage
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature ShopOwnerStock
+     -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Feature ProductsAverageRatingSort
+     -  Link to related .md file: [Link Name](link url)  
 ### Intructions
 #### Don't delete this
 1. Pick one project type
