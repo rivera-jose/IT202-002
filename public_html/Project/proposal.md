@@ -51,10 +51,10 @@
   - [x] \(04/29/2022) Feature-ProductsInfo
      -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
      -  [products info](https://jpr47-prod.herokuapp.com/Project/products-details.php)
-  - [x] \(04/30/2022 of completion) Feature-CartLogin
+  - [x] \(04/30/2022) Feature-CartLogin
      -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
      -  [Cart login](https://jpr47-prod.herokuapp.com/Project/cart.php) 
-  - [x] \(04/30/2022 of completion) Feature-EditCartAdd
+  - [x] \(04/30/2022) Feature-EditCartAdd
      -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
      -  [Edit Cart Add](https://jpr47-prod.herokuapp.com/Project/shop.php)
   - [x] \(04/30/2022) Feature-ViewCart
@@ -63,14 +63,25 @@
   - [x] \(05/01/2022) Feature-EditCartQuantity
      -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
      -  [Edit Cart Quantity ](https://jpr47-prod.herokuapp.com/Project/cart.php)
-  - [x] \(05/01/2022 of completion) Feature-EditCartRemove
+  - [x] \(05/01/2022) Feature-EditCartRemove
      -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md)
      -  [Edit Cart Remove](https://jpr47-prod.herokuapp.com/Project/cart.php)
-  - [x] \(05/01/2022 of completion) Feature-EditCartClear
+  - [x] \(05/01/2022) Feature-EditCartClear
      -  Link to related .md file: [milestone2.md](https://github.com/rivera-jose/IT202-002/blob/Milestone2/public_html/Project/milestone2.md) 
      -  [Edit Cart Clear](https://jpr47-prod.herokuapp.com/Project/cart.php)     
 - Milestone 3
-  - (duplicate template here for Milestone 1 features)
+  - [x] \(05/03/2022) Feature-PurchaseItems
+     -  Link to related .md file: [milestone3.md](https://github.com/rivera-jose/IT202-002/blob/Milestone3/public_html/Project/milestone3.md)
+     -  [Purchase Items](https://jpr47-prod.herokuapp.com/Project/order.php)
+  - [x] \(05/03/2022) Feature-OrderConfirmationPage
+     -  Link to related .md file: [milestone3.md](https://github.com/rivera-jose/IT202-002/blob/Milestone3/public_html/Project/milestone3.md)
+     -  [Order Confirmation](https://jpr47-prod.herokuapp.com/Project/confirmation.php)
+  - [x] \(05/04/2022) Feature-User-PurchaseHistory
+     -  Link to related .md file: [milestone3.md](https://github.com/rivera-jose/IT202-002/blob/Milestone3/public_html/Project/milestone3.md)
+     -  [User Purchase History](https://jpr47-prod.herokuapp.com/Project/purchase_history.php)
+  - [x] \(05/04/2022) Feature-ShopOwner-PurchaseHistory
+     -  Link to related .md file: [milestone3.md](https://github.com/rivera-jose/IT202-002/blob/Milestone3/public_html/Project/milestone3.md)
+     -  [Shop Owner Purchase History](https://jpr47-prod.herokuapp.com/Project/purchase_history.php)
 - Milestone 4
   - (duplicate template here for Milestone 1 features)
 ### Intructions
