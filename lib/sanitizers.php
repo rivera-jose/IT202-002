@@ -16,3 +16,7 @@ function is_valid_password($password)
 {
     return strlen($password) >= 8;
 }
+function is_valid_currency($money)
+{
+    return preg_match('/^\d+(?:\.\d{0,2})$/', $money);
+}
