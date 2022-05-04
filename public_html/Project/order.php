@@ -68,8 +68,16 @@ if(!is_valid_currency($payment))
     $hasError = True;
 }
 
+
 //get cart total cost
 $total_cost = se($_POST, "total_cost", "", false);
+
+if(!(abs(($payment-$total_cost)/$total_cost) < 0.00001))
+{
+    flash("you must enter an amount equal to the total");
+    $hasError = True;
+
+}
 
 if (isset($_POST["purchase"])) {
 //get payment method
@@ -134,6 +142,7 @@ if(!$hasError)
                             $stmt->execute([":uid" => $user_id]);
                         } catch (PDOException $e) {
                             error_log("Update stock error: " . var_export($e, true));
+                            flash("There is not enough products in stock available for purchase");
                             $next_order_id = 0; //using as a controller
                         }
                     }
