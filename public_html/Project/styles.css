@@ -13,7 +13,7 @@
 .alert-info {
     background-color: teal;
 }
-nav {background-color: lightsalmon; padding: 5px; margin: 10px;}
+nav {padding: 5px; margin: 10px;}
 nav li{display: inline;}
 nav li a{color: black;}
 
