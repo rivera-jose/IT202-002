@@ -84,7 +84,7 @@ try {
     }
 
     $params = null;
-
+    $result1=[];
     try{
         $stmt->execute($params);
         $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -98,6 +98,17 @@ try {
         flash("Error fetching items", "danger");
     }
 
+$stmt = $db->prepare("SELECT AVG(rating) AS average_rating FROM Ratings WHERE product_id = :pid ");
+try {
+    $stmt->execute([":pid" => $id]);
+    $r = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($r) {
+        $result2 = $r;
+    }
+} catch (PDOException $e) {
+    error_log(var_export($e, true));
+    flash("Error looking up record", "danger");
+}
 
 ?>
 
@@ -130,28 +141,32 @@ try {
             <textarea id="comment" name="comment" style="width:400px; height:100px;"></textarea><br><br>
             <input type="submit" value="Rate" name="rate"/><br>
             </form>
-            <?php endif; ?> 
-        
-        <h1>Product Ratings</h1>
-        <table class="table">
-        <?php foreach ($result1 as $index => $record) : ?>
-            <?php if ($index == 0) : ?>
-                <thead>
-                    <?php foreach ($record as $column => $value) : ?>
-                            <th><?php se($column); ?></th>
-                    <?php endforeach; ?>
-                </thead>
             <?php endif; ?>
-            <tr>
-                <?php foreach ($record as $column => $value) : ?>
-                        <td><?php se($value, null, "N/A"); ?></td>
-                <?php endforeach; ?>
-            </tr>
-        <?php endforeach; ?>
-    </table>
-
-    <?php endif; ?>
-</div>
+            <?php if (count($result1) == 0) : ?>
+                <p>No ratings available</p>
+            <?php else : ?> 
+                <h1>Product Ratings</h1>
+                <table class="table">
+                    <?php foreach ($result1 as $index => $record) : ?>
+                        <?php if ($index == 0) : ?>
+                            <thead>
+                                <?php foreach ($record as $column => $value) : ?>
+                                    <th><?php se($column); ?></th>
+                                    <?php endforeach; ?>
+                                </thead>
+                                <?php endif; ?>
+                                <tr>
+                                    <?php foreach ($record as $column => $value) : ?>
+                                        <td><?php se($value, null, "N/A"); ?></td>
+                                        <?php endforeach; ?>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                </table>
+                                <h1> Average Rating</h1><br>
+                                <h2><?php echo (int)se($result2, "average_rating", 0, false); ?><h2>
+                                <?php endif; ?>
+                                <?php endif; ?>
+                            </div>
 <?php
 require(__DIR__ . "/../../partials/pagination.php");
 //note we need to go up 1 more directory
