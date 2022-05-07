@@ -49,7 +49,12 @@ if (!in_array($category, $check)) {
 }
 
 //dynamic query
-$query = "SELECT id, name, description, category, unit_price, stock FROM Products WHERE visibility > 0 and stock > 0"; //1=1 shortcut to conditionally build AND clauses
+$base_query = "SELECT id, name, description, category, unit_price, stock FROM Products"; //1=1 shortcut to conditionally build AND clauses
+$total_query = "SELECT count(1) AS total FROM Products";
+
+$query = " WHERE visibility > 0 and stock > 0";
+
+
 $params = []; //define default params, add keys as needed and pass to execute
 //apply name filter
 if (!empty($name)) {
@@ -67,19 +72,34 @@ if ($category !== 'all') {
 if (!empty($col) && !empty($order)) {
     $query .= " ORDER BY $col $order"; //be sure you trust these values, I validate via the in_array checks above
 } 
-//limit
-$query .= " LIMIT 10";
 
-$stmt = $db->prepare($query); //dynamically generated query
-//$stmt = $db->prepare("SELECT id, name, description, cost, stock, image FROM BGD_Items WHERE stock > 0 LIMIT 50");
-try {
-    $stmt->execute($params); //dynamically populated params to bind
+
+
+//paginate
+$per_page=10;
+paginate($total_query . $query, $params, $per_page);
+
+$query .= " LIMIT :offset, :count";
+$params[":offset"]= $offset;
+$params[":count"]= $per_page;
+$stmt = $db->prepare($base_query . $query);
+foreach($params as $key => $value){
+    $type = is_int($value) ? PDO::PARAM_INT :PDO::PARAM_STR;
+    $stmt->bindValue($key,$value,$type);
+}
+
+$params = null;
+$results=[];
+try{
+    $stmt->execute($params);
     $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    if ($r) {
-        $results = $r;
+    if($r)
+    {
+        $results=$r;
     }
-} catch (PDOException $e) {
-    error_log(var_export($e, true));
+
+} catch(PDOException $e){
+    error_log(var_export($e,true));
     flash("Error fetching items", "danger");
 }
 
@@ -179,5 +199,6 @@ try {
     </div>
 </div>
 <?php
+require(__DIR__ . "/../../partials/pagination.php");
 require(__DIR__ . "/../../partials/flash.php");
 ?>
