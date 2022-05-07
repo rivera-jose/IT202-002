@@ -120,18 +120,72 @@ if (!has_role("Shop Owner")) {
 }
 else {
         //$stmt = $db->prepare("SELECT id, total_price, address, payment_method, money_received from Orders ORDER BY created DESC LIMIT 10");
-        $stmt = $db->prepare("SELECT i.username, o.id, o.total_price, o.address, o.payment_method, o.money_received FROM Orders o INNER JOIN Users i on o.user_id = i.id ORDER BY o.created DESC LIMIT 10");
-    try {
-        $stmt->execute([]);
-        $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        if ($r) {
-            $results = $r;
+        $base_query = "SELECT DISTINCT i.username, o.id, o.total_price, o.address, o.payment_method, 
+        o.money_received, o.created as date_purchased FROM Orders o JOIN Users i on o.user_id = i.id JOIN OrderItems j 
+        ON o.id = j.order_id JOIN Products p ON j.product_id = p.id";
+
+        $total_query = "SELECT count(1) AS total FROM Orders o JOIN Users i on o.user_id = i.id 
+        JOIN OrderItems j ON o.id = j.order_id JOIN Products p ON j.product_id = p.id";
+
+        $query = " WHERE 1=1";
+
+        $params = []; //define default params, add keys as needed and pass to execute
+
+        if ($category !== 'all') {
+            $query .= " AND p.category = :cat";
+            $params[":cat"] = "$category";
         }
-    } catch (PDOException $e) {
-        error_log(var_export($e, true));
-        flash("Error fetching records", "danger");
+    
+        if($start)
+        {
+            $query .= " AND o.created >= :start";
+            $params[":start"] = $start;
+        }
+        if($end)
+        {
+            $query .= " AND o.created <= :end";
+            $params[":end"] = date("Y-m-d 23:59:59", strtotime($end));
+        }
+    
+        //apply column and order sort
+        if (!empty($col) && !empty($order)) {
+            $query .= " ORDER BY o.$col $order"; //be sure you trust these values, I validate via the in_array checks above
+        } 
+    
+        
+    //paginate
+    $per_page=10;
+    paginate($total_query . $query, $params, $per_page);
+
+    $query .= " LIMIT :offset, :count";
+    $params[":offset"]= $offset;
+    $params[":count"]= $per_page;
+    $stmt = $db->prepare($base_query . $query);
+    foreach($params as $key => $value){
+        $type = is_int($value) ? PDO::PARAM_INT :PDO::PARAM_STR;
+        $stmt->bindValue($key,$value,$type);
     }
+
+    $params = null;
+    $result1=[];
+    try{
+        $stmt->execute($params);
+        $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if($r)
+        {
+            $result1=$r;
+        }
+
+    } catch(PDOException $e){
+        error_log(var_export($e,true));
+        flash("Error fetching items", "danger");
     }
+        
+        $grand_total = 0;
+        foreach ($result1 as $row) {
+            $grand_total += (float)se($row, "total_price", 0, false);
+        }
+}
 ?>
 <h1>Purchase History</h1>
 <?php if (count($result1) == 0) : ?>
@@ -143,6 +197,7 @@ else {
     <input name="start" type="date" class="form-control" placeholder="mm-dd-yy" aria-label="start-date" aria-describedby="start-date" value="<?php se($start); ?>">
     <span class="input-group-text" id="end-date">End</span>
     <input name="end" type="date" class="form-control" placeholder="mm-dd-yy" aria-label="end-date" aria-describedby="end-date" value="<?php se($end); ?>">
+
     <div class="col">
         <div class="input-group" data="i">
             <div class="input-group-text">Filter</div>
@@ -218,6 +273,10 @@ else {
                 </tr>
             <?php endforeach; ?>
         </table>
+        <?php if(has_role("Shop Owner")) : ?>
+            <div><h4> Total: <?php se($grand_total); ?> </h4></div>
+        <?php endif; ?>
+        
 <?php endif; ?>
 <?php
 /*
