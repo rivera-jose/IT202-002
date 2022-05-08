@@ -16,24 +16,33 @@
  
 ### Proposal Checklist and Evidence
 
-- [Milestone 1](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md)
+- Milestone 1
   - [x] \(02/21/2022) Feature-UserRegistration
+     -  Link to related .md file: [milestone1.md](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md)  
      -  [registration](https://jpr47-prod.herokuapp.com/Project/register.php) 
-  - [x] \(03/28/2022) Feature-UserRoles 
+  - [x] \(03/28/2022) Feature-UserRoles
+     -  Link to related .md file: [milestone1.md](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md) 
      -  [UserRoles](https://jpr47-prod.herokuapp.com/Project/admin/list_roles.php)
   - [x] \(02/25/2022) Feature-UserLogin
+     - Link to related .md file: [milestone1.md](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md)
      -  [login](https://jpr47-prod.herokuapp.com/Project/login.php)
   - [x] \(02/25/2022) Feature-UserLogout
+     -  Link to related .md file: [milestone1.md](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md)
      -  [logout](https://jpr47-prod.herokuapp.com/Project/logout.php)
   - [x] \(03/28/2022) Feature-SecurityRules
+     - Link to related .md file: [milestone1.md](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md)
      -  [SecurityRules](https://jpr47-prod.herokuapp.com/Project/admin/list_roles.php)) 
   - [x] \(03/25/2022) Feature-SiteStyle
+     - Link to related .md file: [milestone1.md](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md)  
      -  [SiteStyle](https://jpr47-prod.herokuapp.com/Project/styles.css) 
   - [x] \(03/03/2022) Feature-FlashMessages
+     - Link to related .md file: [milestone1.md](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md)
      -  [FlashMessages](https://jpr47-prod.herokuapp.com/Project/login.php) 
   - [x] \(03/03/2022) Feature-UserProfile
+     - Link to related .md file: [milestone1.md](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md) 
      -  [profile](https://jpr47-prod.herokuapp.com/Project/profile.php) 
   - [x] \(03/03/2022) Feature-EditProfile
+     - Link to related .md file: [milestone1.md](https://github.com/rivera-jose/IT202-002/blob/Milestone1/public_html/Project/milestone1.md) 
      -  [EditProfile](https://jpr47-prod.herokuapp.com/Project/profile.php) 
 - Milestone 2
   - [x] \(04/27/2022) Feature-Products
@@ -83,20 +92,27 @@
      -  Link to related .md file: [milestone3.md](https://github.com/rivera-jose/IT202-002/blob/Milestone3/public_html/Project/milestone3.md)
      -  [Shop Owner Purchase History](https://jpr47-prod.herokuapp.com/Project/purchase_history.php)
 - Milestone 4
-  - [ ] \(mm/dd/yyyy of completion) Feature-profileStatus
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-productRatings
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-UserPurchaseHistoryChanges
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-ShopOwnerPurchaseHistoryChanges
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature-PaginateShopPage
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature ShopOwnerStock
-     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Feature ProductsAverageRatingSort
-     -  Link to related .md file: [Link Name](link url)  
+  - [x] \(05/04/2022) Feature-profileStatus
+     -  Link to related .md file: [milestone4.md](https://github.com/rivera-jose/IT202-002/blob/Milestone4/public_html/Project/milestone4.md)
+     - [Profile Status](https://jpr47-prod.herokuapp.com/Project/profile.php)
+  - [x] \(05/05/2022) Feature-productRatings
+     -  Link to related .md file: [milestone4.md](https://github.com/rivera-jose/IT202-002/blob/Milestone4/public_html/Project/milestone4.md)
+     - [Product Ratings](https://jpr47-prod.herokuapp.com/Project/product-details.php)
+  - [x] \(05/06/2022) Feature-UserPurchaseHistoryChanges
+     -  Link to related .md file: [milestone4.md](https://github.com/rivera-jose/IT202-002/blob/Milestone4/public_html/Project/milestone4.md)
+     - [User Purchase History Changes](https://jpr47-prod.herokuapp.com/Project/purchase_history.php)
+  - [x] \(05/06/2022) Feature-ShopOwnerPurchaseHistoryChanges
+     -  Link to related .md file: [milestone4.md](https://github.com/rivera-jose/IT202-002/blob/Milestone4/public_html/Project/milestone4.md)
+     - [Shop Owner Purchase History Changes](https://jpr47-prod.herokuapp.com/Project/purchase_history.php)
+  - [x] \(05/07/2022) Feature-PaginateShopPage
+     -  Link to related .md file: [milestone4.md](https://github.com/rivera-jose/IT202-002/blob/Milestone4/public_html/Project/milestone4.md)
+     - [Paginated Shop](https://jpr47-prod.herokuapp.com/Project/shop.php)
+  - [x] \(05/07/2022) Feature ShopOwnerStock
+     -  Link to related .md file: [milestone4.md](https://github.com/rivera-jose/IT202-002/blob/Milestone4/public_html/Project/milestone4.md)
+     - [Shop Owner No stock](https://jpr47-prod.herokuapp.com/Project/shop.php)
+  - [x] \(05/08/2022) Feature ProductsAverageRatingSort
+     -  Link to related .md file: [milestone4.md](https://github.com/rivera-jose/IT202-002/blob/Milestone4/public_html/Project/milestone4.md)
+     - [Shop Average Rating Sort](https://jpr47-prod.herokuapp.com/Project/shop.php)  
 ### Intructions
 #### Don't delete this
 1. Pick one project type

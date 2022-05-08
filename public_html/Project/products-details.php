@@ -40,6 +40,24 @@ try {
         $hasError=true;
     }
 
+    $stmt = $db->prepare("SELECT o.id FROM Orders o JOIN OrderItems i ON o.id = i.order_id
+     WHERE i.product_id = :id AND o.user_id = :uid;");
+    try {
+        $stmt->execute([":id" => $id, ":uid" => get_user_id()]);
+        $r = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($r) {
+            $result3 = $r;
+        }
+    } catch (PDOException $e) {
+        error_log(var_export($e, true));
+        flash("Error looking up record", "danger");
+    }
+
+    if(empty($result3))
+    {
+        $hasError=true;
+        flash("you cannot rate a product you haven't purchased");
+    }
     //echo 'rating: ' . $rating . '<br>' . 'comment: <br>' . $comment;
         if(!$hasError)
         {
