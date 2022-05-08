@@ -21,7 +21,7 @@ $results = [];
 //Sort and Filters
 $col = se($_GET, "col", "unit_price", false);
 //allowed list
-if (!in_array($col, ["unit_price", "stock", "name", "created"])) {
+if (!in_array($col, ["unit_price", "stock", "name", "created", "average_rating"])) {
     $col = "unit_price"; //default value, prevent sql injection
 }
 $order = se($_GET, "order", "asc", false);
@@ -133,6 +133,7 @@ try{
                 <option value="stock">Stock</option>
                 <option value="name">Name</option>
                 <option value="created">Created</option>
+                <option value="average_rating">Average Rating</option>
             </select>
             <script>
                 //quick fix to ensure proper value is selected since
