@@ -110,6 +110,16 @@ try {
     flash("Error looking up record", "danger");
 }
 
+        //note adding to cart doesn't verify price or quantity
+        $stmt = $db->prepare("UPDATE Products SET average_rating = :ar WHERE id = :pid");
+        $stmt->bindValue(":ar", (int)se($result2, "average_rating", 0, false), PDO::PARAM_INT);
+        $stmt->bindValue(":pid",$id, PDO::PARAM_INT);
+        try {
+            $stmt->execute();
+            } catch (PDOException $e) {
+            error_log("Add to cart error: " . var_export($e, true));
+        }
+
 ?>
 
 <div class="container-fluid">
