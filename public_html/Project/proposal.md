@@ -3,6 +3,7 @@
 ## Github Link: https://github.com/rivera-jose/IT202-002/tree/prod/public_html/Project
 ## Project Board Link: https://github.com/rivera-jose/IT202-002/projects/1
 ## Website Link: https://jpr47-prod.herokuapp.com/Project
+## Project Show Case: https://www.youtube.com/watch?v=EUsmpsYuMMI
 ## Your Name: Jose Rivera
 
 <!-- Line item / Feature template (use this for each bullet point) -- DO NOT DELETE THIS SECTION
