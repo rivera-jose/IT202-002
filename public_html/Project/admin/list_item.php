@@ -6,10 +6,24 @@ if (!has_role("Admin") && !has_role("Shop Owner")) {
     flash("You don't have permission to view this page", "warning");
     die(header("Location: $BASE_PATH/home.php"));
 }
+    $categories = array(['category' => 'out of stock']);
 
     //get name partial search
     $name = se($_GET, "name", "", false);
     //var_export($categories);
+
+    //get category search
+    $category = se($_GET, "category", "all", false);
+    $check = [];
+    foreach($categories as $c){
+        $cat = $c["category"];
+        if(!in_array($cat, $check)){
+            array_push($check, $cat);
+        }
+    }
+    if (!in_array($category, $check)) {
+        $category = 'all';
+    }
 
     $results = [];
 
@@ -25,6 +39,11 @@ if (!has_role("Admin") && !has_role("Shop Owner")) {
     if (!empty($name)) {
         $query .= " AND name like :name";
         $params[":name"] = "%$name%";
+    }
+
+    if ($category !== 'all') {
+        $query .= " AND stock <= :cat ";
+        $params[":cat"] = 0;
     }
     
     //paginate function
@@ -61,6 +80,19 @@ if (!has_role("Admin") && !has_role("Shop Owner")) {
 <div class="container-fluid">
     <h1>List Items</h1>
     <form class="row row-cols-auto g-3 align-items-center">
+    <div class="col">
+        <div class="input-group" data="i">
+            <div class="input-group-text">Filter</div>
+            <select class="form-control bg-info" name="category" data="took">
+                <?php foreach ($categories as $item1) : ?>
+                    <option value="<?php se($item1, "category"); ?>"><?php se($item1, "category"); ?></option>
+                <?php endforeach; ?>
+            </select>
+            <script>
+                document.forms[0].category.value = "<?php se($category); ?>";
+            </script>
+        </div>
+    </div>
     <div class="col">
         <div class="input-group" data="i">
             <div class="input-group-text">Search Filter</div>

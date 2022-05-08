@@ -15,7 +15,6 @@ try {
     flash("Error fetching items", "danger");
 }
 //end get categories
-
 $results = [];
 
 //process filters/sorting
